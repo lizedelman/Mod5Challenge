@@ -1,13 +1,15 @@
 //Issues:
 //1. The colorcode for time period doesn't work - not being called
 
-var hourBlock = document.getElementById("#hourRows");
-var currentDay = document.getElementById("#currentDay");
-var currentTime = dayjs().format("h:mm:ss");
+var hourBlock = document.getElementById(".row");
 
 //Sets current day at top of page
 var currentDay = dayjs().format("MMM D, YYYY");
 $("#currentDay").text(currentDay);
+
+//Sets current time at top of page
+var currentTime = dayjs().format("hh:mm");
+console.log(currentTime);
 
 // load html before js
 $(document).ready(function () {
@@ -32,18 +34,19 @@ $(document).ready(function () {
 
     //Should color code the hour blocks - NOT working
     function setHourBlockClass() {
-      if (hourBlock < currentTime) {
-        $(this).addClass("past");
-        $(this).removeClass("future");
-        $(this).removeClass("present");
-      } else if (hourBlock === currentTime) {
-        $(this).removeClass("past");
-        $(this).addClass("present");
-        $(this).removeClass("future");
-      } else {
-        $(this).removeClass("present");
-        $(this).removeClass("past");
+      document.querySelectorAll(".row").forEach(setHourBlockClass);
+      if (hourBlock > currentTime) {
         $(this).addClass("future");
+        // $(this).removeClass("past");
+        // $(this).removeClass("present");
+      } else if (hourBlock === currentTime) {
+        $(this).addClass("present");
+        // $(this).removeClass("past");
+        // $(this).removeClass("future");
+      } else {
+        $(this).addClass("past");
+        // $(this).removeClass("present");
+        // $(this).removeClass("future");
       }
     }
   );
