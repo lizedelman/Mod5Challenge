@@ -1,5 +1,13 @@
-var hourBlock = document.getElementById("#row");
+//Issues:
+//1. The colorcode for time period doesn't work - not being called
+
+var hourBlock = document.getElementById("#hourRows");
+var currentDay = document.getElementById("#currentDay");
 var currentTime = dayjs().format("h:mm:ss");
+
+//Sets current day at top of page
+var currentDay = dayjs().format("MMM D, YYYY");
+$("#currentDay").text(currentDay);
 
 // load html before js
 $(document).ready(function () {
@@ -22,7 +30,7 @@ $(document).ready(function () {
       $("#15 .col-md-9").val(localStorage.getItem("15"));
     },
 
-    //When is this getting called?
+    //Should color code the hour blocks - NOT working
     function setHourBlockClass() {
       if (hourBlock < currentTime) {
         $(this).addClass("past");
@@ -37,10 +45,6 @@ $(document).ready(function () {
         $(this).removeClass("past");
         $(this).addClass("future");
       }
-
-      //Sets current day at top of page
-      var currentDay = dayjs().format("MMM D, YYYY");
-      $("#currentDay").text(currentDay);
     }
   );
 });
