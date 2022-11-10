@@ -8,7 +8,7 @@ $("#currentDay").text(currentDay);
 // load html before js
 $(document).ready(function () {
   //Get current time
-  var currentTime = dayjs().format("hh");
+  var currentTime = dayjs().format("h");
   console.log(currentTime);
 
   //color codes the time blocks
