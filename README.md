@@ -1,4 +1,6 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 Challenge: Third-Party APIs: Work Day Scheduler
+
+Create a daily work scheduler
 
 ## Psuedo Code:
 
@@ -9,23 +11,22 @@
 5. When they refresh page the event info is still there
 6. The time block event info can be updated
 
-## Your Task
+## Installation
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Github: https://github.com/lizedelman/Mod5Challenge
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Completed Page
+
+Screenshot: .assets/SchedulerScreenshot.png
 
 ## User Story
 
-```md
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
-```
 
 ## Acceptance Criteria
 
-```md
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -39,10 +40,12 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
-```
 
-The following animation demonstrates the application functionality:
+## Credits
 
-<!-- @TODO: create ticket to review/update image) -->
+Collaborators include my tutor Michelle Jordan.
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+## License
+
+License: CC0-1.0
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
