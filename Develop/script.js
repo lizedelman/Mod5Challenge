@@ -1,14 +1,16 @@
 //Issues:
-//1. The colorcode for time period doesn't work - not being called
+//1. The colorcode for time period doesn't work - not being called??s
 
 //Sets current day at top of page
 var currentDay = dayjs().format("MMM D, YYYY");
 $("#currentDay").text(currentDay);
+var currentTime = dayjs().format("h:mm a");
+$("#currentTime").text(currentTime);
 
 // load html before js
 $(document).ready(function () {
   //Get current time
-  var currentTime = dayjs().format("h");
+  var currentTime = dayjs().format("H");
   console.log(currentTime);
 
   //color codes the time blocks
