@@ -17,7 +17,7 @@ Github: https://github.com/lizedelman/Mod5Challenge
 
 ## Completed Page
 
-Screenshot: .assets/SchedulerScreenshot.png
+![Screenshot](./Assets/SchedulerScreenshot.png)
 
 ## User Story
 
